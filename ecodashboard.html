@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UoM GreenMap - Eco-Dashboard</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Use the Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom styles for the active navigation link */
+        .nav-link.active {
+            border-bottom-width: 4px;
+            --tw-border-opacity: 1;
+            border-color: rgb(5 150 105 / var(--tw-border-opacity)); /* emerald-600 */
+            --tw-text-opacity: 1;
+            color: rgb(4 120 87 / var(--tw-text-opacity)); /* emerald-700 */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased">
+
+    <!-- Top Header Bar -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center px-6">
+            <!-- Header -->
+            <div class="py-4 text-center sm:text-left">
+                <h1 class="text-2xl font-bold text-emerald-700">UoM GreenMap</h1>
+                <p class="text-sm text-slate-500">Urban Informatics Project</p>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="flex flex-wrap sm:flex-nowrap justify-center sm:justify-end space-x-1">
+                <a href="index.html" class="nav-link py-5 px-4 text-slate-600 hover:text-emerald-700 transition-colors font-medium">
+                    Home
+                </a>
+                <a href="ecodashboard.html" class="nav-link active py-5 px-4 text-slate-600 hover:text-emerald-700 transition-colors font-medium">
+                    Eco-Dashboard
+                </a>
+                <a href="digitalarboretum.html" class="nav-link py-5 px-4 text-slate-600 hover:text-emerald-700 transition-colors font-medium">
+                    Digital Arboretum
+                </a>
+                <a href="guidedtours.html" class="nav-link py-5 px-4 text-slate-600 hover:text-emerald-700 transition-colors font-medium">
+                    Guided Tours
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto p-6 md:p-10">
+
+        <!-- Eco-Dashboard Content -->
+        <div id="dashboard">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6">Campus Eco-Dashboard</h2>
+            
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                
+                <!-- Card 1: Tree Cover -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
+                    <div class="bg-emerald-100 p-3 rounded-full">
+                        <!-- Heroicon: map -->
+                        <svg class="w-6 h-6 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m0 0v2.25m0-2.25h1.5M12 9m0 0v2.25m0-2.25h1.5m-1.5 0H12m3-3v2.25m0-2.25h1.5M15 9h-1.5M18 11.25l-3-3m0 0l-3 3m3-3v11.25" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-sm text-slate-500">Total Canopy Cover</p>
+                        <!-- NOTE: Replace with your calculated data -->
+                        <p class="text-2xl font-bold">18.5%</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: CO2 Absorption -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
+                    <div class="bg-emerald-100 p-3 rounded-full">
+                        <!-- Heroicon: cloud-arrow-down -->
+                        <svg class="w-6 h-6 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9.75v6.75m0 0l-3-3m3 3l3-3m-8.25 6a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.133-2.326 2.25 2.25 0 014.5 0v.75a2.25 2.25 0 01-2.25 2.25H15M6.75 15.75H17.25" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-sm text-slate-500">Est. CO2 Absorption / Year</p>
+                        <!-- NOTE: Replace with your calculated data -->
+                        <p class="text-2xl font-bold">12,500 kg</p>
+                    </div>
+                </div>
+                
+                <!-- Card 3: Biodiversity -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
+                    <div class="bg-emerald-100 p-3 rounded-full">
+                        <!-- Heroicon: leaf -->
+                        <svg class="w-6 h-6 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0-1.31.872-2.472 2.124-2.812a.75.75 0 11.23-1.482A5.25 5.25 0 006.75 9.75c0 1.31.872 2.472 2.124 2.812a.75.75 0 11-.23 1.482A5.25 5.25 0 006.75 9.75z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-sm text-slate-500">Total Species Identified</p>
+                        <!-- NOTE: Replace with your count -->
+                        <p class="text-2xl font-bold">42</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Embedded Google My Map -->
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold mb-4">Campus Tree Map</h3>
+                <!-- 
+                CRITICAL: You MUST replace this iframe with your own.
+                1. Open your Google My Map.
+                2. Click the three-dot menu (...) next to the map title.
+                3. Select "Embed on my site".
+                4. Copy the <iframe> code it gives you.
+                5. Paste that code here, replacing the iframe below.
+                6. Make sure to add `class="w-full h-[500px] md:h-[600px] rounded-lg border-0"` to the iframe tag.
+                -->
+                <iframe 
+                    src="https://www.google.com/maps/d/embed?mid=1V9y35EUSQurSLpVx4GaR3-CCHdAYHAg&usp=sharing" 
+                    class="w-full h-[500px] md:h-[600px] rounded-lg border-0"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <p class="text-sm text-slate-500 mt-2">Use the map legend (icon in top-left) to toggle layers and view specific trees.</p>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

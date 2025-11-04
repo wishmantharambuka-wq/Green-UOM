@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UoM GreenMap - Home</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Use the Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Glass effect for header */
+        header {
+            background: rgba(255, 255, 255, 0.8) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* Custom styles for the active navigation link */
+        .nav-link.active {
+            border-bottom-width: 4px;
+            --tw-border-opacity: 1;
+            border-color: rgb(5 150 105 / var(--tw-border-opacity)); /* emerald-600 */
+            --tw-text-opacity: 1;
+            color: rgb(4 120 87 / var(--tw-text-opacity)); /* emerald-700 */
+            font-weight: 600;
+        }
+
+        /* Glass effect for nav links */
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased">
+
+    <!-- Top Header Bar -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center px-6">
+            <!-- Header -->
+            <div class="py-4 text-center sm:text-left">
+                <h1 class="text-2xl font-bold text-emerald-700">UoM GreenMap</h1>
+                <p class="text-sm text-slate-500">Urban Informatics Project</p>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="flex flex-wrap sm:flex-nowrap justify-center sm:justify-end space-x-1">
+                <a href="index.html" class="nav-link active py-5 px-4 text-slate-600 hover:text-emerald-700 transition-colors font-medium">
+                    Home
+                </a>
+                <a href="ecodashboard.html" class="nav-link py-5 px-4 text-slate-600 hover:text-emerald-700 transition-colors font-medium">
+                    Eco-Dashboard
+                </a>
+                <a href="digitalarboretum.html" class="nav-link py-5 px-4 text-slate-600 hover:text-emerald-700 transition-colors font-medium">
+                    Digital Arboretum
+                </a>
+                <a href="guidedtours.html" class="nav-link py-5 px-4 text-slate-600 hover:text-emerald-700 transition-colors font-medium">
+                    Guided Tours
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto p-6 md:p-10">
+
+        <!-- Home Page Content -->
+        <div id="home">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6">Welcome to the UoM GreenMap</h2>
+            
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <!-- Section 1: Introduction to the Project -->
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="w-full md:w-2/3">
+                        <h3 class="text-2xl font-semibold text-emerald-700 mb-4">Our Campus, Our Green Lung</h3>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            The University of Moratuwa is a hub of innovation and intellect, uniquely positioned within a dense urban landscape. As our city grows, the pressure on natural spaces increases. This project explores our campus's most valuable, living asset: its trees.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            More than just scenery, our campus trees function as a vital <strong class="font-medium text-emerald-600">"green lung."</strong> They actively combat air pollution, mitigate the urban heat island effect, manage stormwater, and provide quiet, shaded spaces for learning and collaboration. In an urbanized area, this green infrastructure is not a luxury—it is a necessity.
+                        </p>
+                        
+                        <h4 class="text-xl font-semibold text-slate-700 mb-3">An Urban Informatics Perspective</h4>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            This GreenMap is an Urban Informatics initiative to see the campus differently. Instead of just seeing trees, we see a distributed network of environmental assets. We are mapping, measuring (using data like <strong class="font-medium">Height and DBH</strong>), and analyzing our green canopy to understand its true impact.
+                        </p>
+                        
+                        <a href="ecodashboard.html" class="inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-emerald-700 transition-colors">
+                            Explore the Eco-Dashboard &rarr;
+                        </a>
+                    </div>
+                    <div class="w-full md:w-1/3">
+                        <img src="https://placehold.co/400x500/10B981/FFFFFF?text=UoM+Campus+Tree" alt="University of Moratuwa Tree Canopy" class="w-full h-full object-cover rounded-lg shadow-md min-h-[300px]">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- No JavaScript needed for tabs anymore -->
+
+</body>
+</html>
+

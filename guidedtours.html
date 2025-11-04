@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UoM GreenMap - Guided Tours</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Use the Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom styles for the active navigation link */
+        .nav-link.active {
+            border-bottom-width: 4px;
+            --tw-border-opacity: 1;
+            border-color: rgb(5 150 105 / var(--tw-border-opacity)); /* emerald-600 */
+            --tw-text-opacity: 1;
+            color: rgb(4 120 87 / var(--tw-text-opacity)); /* emerald-700 */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased">
+
+    <!-- Top Header Bar -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center px-6">
+            <!-- Header -->
+            <div class="py-4 text-center sm:text-left">
+                <h1 class="text-2xl font-bold text-emerald-700">UoM GreenMap</h1>
+                <p class="text-sm text-slate-500">Urban Informatics Project</p>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="flex flex-wrap sm:flex-nowrap justify-center sm:justify-end space-x-1">
+                <a href="index.html" class="nav-link py-5 px-4 text-slate-600 hover:text-emerald-700 transition-colors font-medium">
+                    Home
+                </a>
+                <a href="ecodashboard.html" class="nav-link py-5 px-4 text-slate-600 hover:text-emerald-700 transition-colors font-medium">
+                    Eco-Dashboard
+                </a>
+                <a href="digitalarboretum.html" class="nav-link py-5 px-4 text-slate-600 hover:text-emerald-700 transition-colors font-medium">
+                    Digital Arboretum
+                </a>
+                <a href="guidedtours.html" class="nav-link active py-5 px-4 text-slate-600 hover:text-emerald-700 transition-colors font-medium">
+                    Guided Tours
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto p-6 md:p-10">
+
+        <!-- Guided Tours Content -->
+        <div id="tours">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6">Guided Tours</h2>
+            <p class="text-slate-600 mb-8">Take a self-guided walk around campus to explore our green infrastructure. Select a tour below to see the route on the map.</p>
+            
+            <!-- 
+            NOTE: To make this work, create each "tour" as a new LAYER in your Google My Map. 
+            Then, you can instruct users to toggle that layer on/off from the map legend.
+            -->
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Tour Card 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-emerald-700 mb-2">The Shady Walk</h3>
+                        <p class="text-slate-600 mb-4">A route connecting the 10 largest canopy trees on campus. Perfect for escaping the sun on a hot day.</p>
+                    </div>
+                    <!-- This button should link to the dashboard or a specific map view -->
+                    <a href="ecodashboard.html" class="inline-block text-center bg-emerald-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-emerald-700 transition-colors w-full md:w-auto">
+                        View on Map
+                    </a>
+                </div>
+
+                <!-- Tour Card 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-emerald-700 mb-2">The Biodiversity Route</h3>
+                        <p class="text-slate-600 mb-4">Discover the widest variety of native and non-native species, from fruit trees to flowering giants.</p>
+                    </div>
+                    <a href="ecodashboard.html" class="inline-block text-center bg-emerald-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-emerald-700 transition-colors w-full md:w-auto">
+                        View on Map
+                    </a>
+                </div>
+                
+                <!-- Tour Card 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-emerald-700 mb-2">Faculty of Engineering Tour</h3>
+                        <p class="text-slate-600 mb-4">Explore the trees affiliated with the Engineering faculty, including several mature Rain Trees.</p>
+                    </div>
+                    <a href="ecodashboard.html" class="inline-block text-center bg-emerald-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-emerald-700 transition-colors w-full md:w-auto">
+                        View on Map
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>

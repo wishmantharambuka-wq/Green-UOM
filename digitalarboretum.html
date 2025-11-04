@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UoM GreenMap - Digital Arboretum</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Use the Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom styles for the active navigation link */
+        .nav-link.active {
+            border-bottom-width: 4px;
+            --tw-border-opacity: 1;
+            border-color: rgb(5 150 105 / var(--tw-border-opacity)); /* emerald-600 */
+            --tw-text-opacity: 1;
+            color: rgb(4 120 87 / var(--tw-text-opacity)); /* emerald-700 */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased">
+
+    <!-- Top Header Bar -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center px-6">
+            <!-- Header -->
+            <div class="py-4 text-center sm:text-left">
+                <h1 class="text-2xl font-bold text-emerald-700">UoM GreenMap</h1>
+                <p class="text-sm text-slate-500">Urban Informatics Project</p>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="flex flex-wrap sm:flex-nowrap justify-center sm:justify-end space-x-1">
+                <a href="index.html" class="nav-link py-5 px-4 text-slate-600 hover:text-emerald-700 transition-colors font-medium">
+                    Home
+                </a>
+                <a href="ecodashboard.html" class="nav-link py-5 px-4 text-slate-600 hover:text-emerald-700 transition-colors font-medium">
+                    Eco-Dashboard
+                </a>
+                <a href="digitalarboretum.html" class="nav-link active py-5 px-4 text-slate-600 hover:text-emerald-700 transition-colors font-medium">
+                    Digital Arboretum
+                </a>
+                <a href="guidedtours.html" class="nav-link py-5 px-4 text-slate-600 hover:text-emerald-700 transition-colors font-medium">
+                    Guided Tours
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto p-6 md:p-10">
+
+        <!-- Digital Arboretum Content -->
+        <div id="arboretum">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6">Digital Arboretum</h2>
+            
+            <!-- Arboretum Analytics Section -->
+            <h3 class="text-2xl font-semibold text-slate-700 mb-4">Arboretum Analytics</h3>
+            <p class="text-slate-600 mb-6">A high-level overview of the campus green infrastructure, based on all surveyed trees.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+                <!-- Analytics Card 1 -->
+                <div class="bg-white p-5 rounded-lg shadow-md">
+                    <p class="text-sm font-medium text-slate-500">Total Trees Surveyed</p>
+                    <!-- NOTE: Replace with your data -->
+                    <p class="text-3xl font-bold text-emerald-600">482</p> 
+                </div>
+                <!-- Analytics Card 2 -->
+                <div class="bg-white p-5 rounded-lg shadow-md">
+                    <p class="text-sm font-medium text-slate-500">Unique Species</p>
+                    <!-- NOTE: Replace with your data -->
+                    <p class="text-3xl font-bold text-emerald-600">42</p>
+                </div>
+                <!-- Analytics Card 3 -->
+                <div class="bg-white p-5 rounded-lg shadow-md">
+                    <p class="text-sm font-medium text-slate-500">Most Common Species</p>
+                    <!-- NOTE: This is where your "how many mango" data goes -->
+                    <p class="text-3xl font-bold text-emerald-600">Mango (85)</p>
+                </div>
+                <!-- Analytics Card 4 -->
+                <div class="bg-white p-5 rounded-lg shadow-md">
+                    <p class="text-sm font-medium text-slate-500">Largest DBH Recorded</p>
+                    <!-- NOTE: Replace with your data -->
+                    <p class="text-3xl font-bold text-emerald-600">2.1m</p>
+                    <p class="text-xs text-slate-400">Rain Tree (E-Fac)</p>
+                </div>
+            </div>
+
+            <!-- Search and Library Header -->
+            <div class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
+                <h3 class="text-2xl font-semibold text-slate-700">Species Library</h3>
+                <div class="w-full md:w-1/3">
+                    <input type="text" placeholder="Search for a species (e.g., 'Mango')" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                </div>
+            </div>
+
+            <!-- Species Card Grid -->
+            <!-- NOTE: You will loop over your tree data to create these cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Example Card 1: Rain Tree -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <!-- Use the pictures you collected. Use placehold.co for now -->
+                    <img src="https://placehold.co/600x400/10B981/FFFFFF?text=Rain+Tree" alt="Rain Tree" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-emerald-700">Rain Tree</h3>
+                        <p class="text-sm italic text-slate-500 mb-4">Samanea saman</p>
+                        
+                        <p class="text-sm text-slate-600 mb-4">A large, wide-canopy tree providing excellent shade. Known for its leaves that fold during rainy weather and at night.</p>
+                        
+                        <!-- UPGRADED: Data List -->
+                        <dl class="text-sm mb-6">
+                            <div class="flex justify-between py-1 border-b border-slate-100">
+                                <dt class="font-medium text-slate-600">Avg. Height:</dt>
+                                <dd class="text-slate-800">25m</dd>
+                            </div>
+                            <div class="flex justify-between py-1 border-b border-slate-100">
+                                <dt class="font-medium text-slate-600">Avg. DBH:</dt>
+                                <dd class="text-slate-800">1.2m</dd>
+                            </div>
+                            <div class="flex justify-between py-1 border-b border-slate-100">
+                                <dt class="font-medium text-slate-600">Affiliation:</dt>
+                                <dd class="text-slate-800">Faculty of Engineering</dd>
+                            </div>
+                        </dl>
+
+                        <!-- NEW: Action Buttons -->
+                        <div class="flex space-x-3">
+                            <button class="flex-1 bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-emerald-700 transition-colors">View Gallery</button>
+                            <button class="flex-1 bg-slate-200 text-slate-700 px-4 py-2 rounded-lg font-medium text-sm hover:bg-slate-300 transition-colors">Find on Map</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example Card 2: Na Tree (Ironwood) -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/10B981/FFFFFF?text=Na+Tree" alt="Na Tree" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-emerald-700">Na Tree (Ironwood)</h3>
+                        <p class="text-sm italic text-slate-500 mb-4">Mesua ferrea</p>
+                        
+                        <p class="text-sm text-slate-600 mb-4">The national tree of Sri Lanka. Prized for its hard, heavy timber and beautiful, fragrant white flowers.</p>
+                        
+                        <!-- UPGRADED: Data List -->
+                        <dl class="text-sm mb-6">
+                            <div class="flex justify-between py-1 border-b border-slate-100">
+                                <dt class="font-medium text-slate-600">Avg. Height:</dt>
+                                <dd class="text-slate-800">18m</dd>
+                            </div>
+                            <div class="flex justify-between py-1 border-b border-slate-100">
+                                <dt class="font-medium text-slate-600">Avg. DBH:</dt>
+                                <dd class="text-slate-800">0.8m</dd>
+                            </div>
+                            <div class="flex justify-between py-1 border-b border-slate-100">
+                                <dt class="font-medium text-slate-600">Affiliation:</dt>
+                                <dd class="text-slate-800">Admin Department</dd>
+                            </div>
+                        </dl>
+
+                        <!-- NEW: Action Buttons -->
+                        <div class="flex space-x-3">
+                            <button class="flex-1 bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-emerald-700 transition-colors">View Gallery</button>
+                            <button class="flex-1 bg-slate-200 text-slate-700 px-4 py-2 rounded-lg font-medium text-sm hover:bg-slate-300 transition-colors">Find on Map</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example Card 3: Mango -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/10B981/FFFFFF?text=Mango+Tree" alt="Mango Tree" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-emerald-700">Mango</h3>
+                        <p class="text-sm italic text-slate-500 mb-4">Mangifera indica</p>
+                        
+                        <p class="text-sm text-slate-600 mb-4">A common and beloved fruit tree. Provides dense shade and, of course, delicious fruit in season.</p>
+                        
+                        <!-- UPGRADED: Data List -->
+                        <dl class="text-sm mb-6">
+                            <div class="flex justify-between py-1 border-b border-slate-100">
+                                <dt class="font-medium text-slate-600">Avg. Height:</dt>
+                                <dd class="text-slate-800">20m</dd>
+                            </div>
+                            <div class="flex justify-between py-1 border-b border-slate-100">
+                                <dt class="font-medium text-slate-600">Avg. DBH:</dt>
+                                <dd class="text-slate-800">1.0m</dd>
+                            </div>
+                            <div class="flex justify-between py-1 border-b border-slate-100">
+                                <dt class="font-medium text-slate-600">Affiliation:</dt>
+                                <dd class="text-slate-800">Faculty of IT</dd>
+
+                            </div>
+                        </dl>
+
+                        <!-- NEW: Action Buttons -->
+                        <div class="flex space-x-3">
+                            <button class="flex-1 bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-emerald-700 transition-colors">View Gallery</button>
+                            <button class="flex-1 bg-slate-200 text-slate-700 px-4 py-2 rounded-lg font-medium text-sm hover:bg-slate-300 transition-colors">Find on Map</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add more cards here as you populate your data -->
+
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>
